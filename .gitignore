@@ -1,0 +1,6 @@
+build
+3rdparty/dependencies/*
+*.swp
+.ycm*.py
+WORK*
+*~
