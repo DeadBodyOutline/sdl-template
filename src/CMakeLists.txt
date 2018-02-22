@@ -18,5 +18,15 @@ elseif(NOT SDL2_FOUND)
     message("\n-> SDL2 directory not found. Set SDL2_PATH to SDL2 installation path (containing \"include\", \"lib\", directories).")
 endif(SDL2_FOUND)
 
+# SDL2_image stuff
+find_package(SDL2_image REQUIRED)
+if(SDL2_IMAGE_FOUND)
+    include_directories(${SDL2_IMAGE_INCLUDE_DIR})
+    target_link_libraries(${PROJECT_NAME} ${SDL2_IMAGE_LIBRARIES})
+elseif(NOT SDL2_IMAGE_FOUND)
+    set(SDL2_IMAGE_PATH "" CACHE PATH "SDL2_image installation path")
+    message("\n-> SDL2_image directory not found. Set SDL2_IMAGE_PATH to SDL2_image installation path (containing \"include\", \"lib\", directories).")
+endif(SDL2_IMAGE_FOUND)
+
 # additional linking
 target_link_libraries(${PROJECT_NAME} dl)
