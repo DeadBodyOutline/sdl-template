@@ -14,4 +14,9 @@ add_definitions(
 set(PROJECT_NAME "sdl-template")
 project(${PROJECT_NAME})
 
+# from our project 'survival', thanks Zanoni!
+if(NOT DEFINED RESOURCES_DIR)
+      add_definitions(-DRESOURCES_DIR="${CMAKE_SOURCE_DIR}/resources")
+endif()
+
 add_subdirectory(src)

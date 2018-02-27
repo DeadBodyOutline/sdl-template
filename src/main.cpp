@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
     SDL_SetRenderDrawColor(renderer, 5, 6, 8, 255);
 
     // load Dead Body Outline logo TODO
-    SDL_Texture *texture = IMG_LoadTexture(renderer, "resources/dbo_logo.png");
+    SDL_Texture *texture = IMG_LoadTexture(renderer, RESOURCES_DIR"/dbo_logo.png");
     if (!texture)
         return 3;
 
