@@ -35,7 +35,7 @@ Targets:
 ====================
 linux
 ---------------------
-HELL YEAH
+![linux build](/screenshots/linux.png?raw=true)
 
 (WHO IS NEXT??)
 ---------------------
